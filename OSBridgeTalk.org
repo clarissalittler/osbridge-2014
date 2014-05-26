@@ -1,0 +1,50 @@
+#+TITLE: What Are Computers, Really?
+#+AUTHOR: Clarissa Littler
+#+OPTIONS: H:3
+
+* Introduction
+meta-note: let's try and make sure that we have about a slide for every 30 seconds, which means roughly 90 slides. Although, truly, if we want to leave time for a few questions at the end maybe I should make it something like 35 minutes or 40 minutes instead. Also, doing it ignite style even for 40 minutes should be about 160 slides. Which might be doable by probably difficult as hell. That would involve writing like 50 slides a week.
+** Computers: What Can They Do?
+*** Things computers are /really/ good at
+*** Things computers are sorta good at
+*** Things computers are not very good at
+** Computers: What /Can't/ They Do?
+*** Programs analyzing programs
+*** Programs solving all of logic
+*** Programs adding numbers exactly
+** Computers: Who /Were/ They?
+*** Computer as title before computer as noun
+*** People who performed computations by hand
+*** Mostly women
+* A Bit of Maths
+** Sets and Counting
+*** How many fingers am I holding up?
+*** Sets in mathematics: bags of stuff
+*** Sets in mathematics: set of sheep
+*** Sets in mathematics: when two bags are "equal"
+*** Sets in mathematics:
+** Infinite Sets
+*** The Counting Numbers
+*** The Natural Numbers
+*** How Many Natural Numbers Are There?
+*** The Real Numbers
+*** Sizes of Infinity
+*** Infinite Infinities
+*** Diagonalization
+* Models of Computation
+** Turing Machines
+*** Turing's inspiration
+*** Alan Turing In a Nutshell
+*** Turing Machines
+** Untyped Lambda Calculus 
+* Logic
+** Paradoxes
+*** Barber Paradox
+*** Russel's Paradox
+*** The Halting Problem
+** Constructive Logic
+*** East Coast/West Coast Beef
+*** Types
+*** Typed Lambda Calculus
+*** Statically Typed Languages
+
