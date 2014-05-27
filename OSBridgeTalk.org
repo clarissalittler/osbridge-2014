@@ -1,50 +1,68 @@
+#+STARTUP: beamer
 #+TITLE: What Are Computers, Really?
 #+AUTHOR: Clarissa Littler
-#+OPTIONS: H:3
-
-* Introduction
-meta-note: let's try and make sure that we have about a slide for every 30 seconds, which means roughly 90 slides. Although, truly, if we want to leave time for a few questions at the end maybe I should make it something like 35 minutes or 40 minutes instead. Also, doing it ignite style even for 40 minutes should be about 160 slides. Which might be doable by probably difficult as hell. That would involve writing like 50 slides a week.
-** Computers: What Can They Do?
-*** Things computers are /really/ good at
-*** Things computers are sorta good at
-*** Things computers are not very good at
-** Computers: What /Can't/ They Do?
-*** Programs analyzing programs
-*** Programs solving all of logic
-*** Programs adding numbers exactly
-** Computers: Who /Were/ They?
-*** Computer as title before computer as noun
-*** People who performed computations by hand
-*** Mostly women
-* A Bit of Maths
-** Sets and Counting
-*** How many fingers am I holding up?
-*** Sets in mathematics: bags of stuff
-*** Sets in mathematics: set of sheep
-*** Sets in mathematics: when two bags are "equal"
-*** Sets in mathematics:
-** Infinite Sets
-*** The Counting Numbers
-*** The Natural Numbers
-*** How Many Natural Numbers Are There?
-*** The Real Numbers
-*** Sizes of Infinity
-*** Infinite Infinities
-*** Diagonalization
-* Models of Computation
-** Turing Machines
-*** Turing's inspiration
-*** Alan Turing In a Nutshell
-*** Turing Machines
-** Untyped Lambda Calculus 
-* Logic
-** Paradoxes
-*** Barber Paradox
-*** Russel's Paradox
-*** The Halting Problem
-** Constructive Logic
-*** East Coast/West Coast Beef
-*** Types
-*** Typed Lambda Calculus
-*** Statically Typed Languages
-
+#+OPTIONS: H:2
+* Computers
+** What Are Computers, Really?	
+   + Physical devices that carry out computation
+     #+BEAMER: \pause
+   + We're done!
+** What Are Computers, Really?
+   + Thanks you've been a wonderful audience!
+     \pause
+   + Wait, no, sorry let's back up
+     \pause
+   + Computers are things that compute
+   + We haven't the foggiest what computation means
+** What +Are+ Is +Computers+ Computation, Really?
+   + The right question!
+   + Computations are a subset of mathematical operations
+   + All computations are definable in mathematics
+   + Not all +men+ mathematics!
+* Computation
+** Computation: An Informal Definition?
+   A mathematical operation is computable when it takes:
+   + Finite rules
+   + Finite steps
+   + Finite data
+   What does this really mean, though?
+** Objections to the Informal Definition
+   + Can't we write infinite loops?
+   + Operating Systems
+   + Web Servers
+   + Stuck vs. Waiting for Input
+** Examples of Computation
+   + Counting on your fingers
+     \pause
+   + Alphabetizing books
+     \pause
+   + Evaluating 3*10-7 by hand
+     \pause
+   + Listing all the files in a directory
+** More Examples of Computation
+   + Is $\text{gcd}(a,b)$, for all $a,b$ computable?
+     \pause
+   + Yes! You can follow Euclid's algorithm for any two numbers
+     \pause
+   + Is $\int^a_b\int^c_d f(x,y) dx dy$, for all $f,a,b,c,d$, computable?
+     \pause
+   + No! For most functions this is only approxmitely computable
+     + Numerical integration
+     + Monte Carlo methods
+     + Runge-Kutta for 1-d case
+** Compare and Contrast
+   + An algorithm captures notion of computation
+   (Insert Euclid's algorithm description)
+      + Finite steps
+      + Finite data
+      + Finite rules
+** Compare and Contrast
+    + Compare with $\int^a_b f(x) dx$
+   (Insert description of infinite sum)
+      + +Finite steps+
+      + Finite data (?)
+      + Finite rules
+** Algorithms
+    + "step-by-step procedure for calculation"
+    + Intuitive understanding matches informal definition of computation
+    + 
