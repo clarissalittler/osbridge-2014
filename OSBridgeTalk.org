@@ -90,6 +90,24 @@
    + The set of speakers you'd rather be listening to
 ** How infinite is infinite
    + Infinity comes in different sizes!
+   \pause
+   + Which is bigger: the integers or the natural numbers?
+   \pause
+   + They're the same!
+   \pause
+   + Which is bigger: the natural numbers or the set of sentences in English?
+   \pause
+   + They're the same!
+   \pause
+   + Which is bigger: the set of sentences or the set of programs in Ruby?
+   \pause
+   + They're the same!
+   \pause
+   + Which is bigger: the set of programs in Ruby or the set of functions from integers to integers?
+   \pause
+   + The set of functions from integers to integers!
+** Sets of functions
+   + How many functions 
 * Turing Machines
 * Lambda Calculus
 * Constructive Mathematics
