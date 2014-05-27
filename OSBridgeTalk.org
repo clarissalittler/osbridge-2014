@@ -26,7 +26,7 @@
    + Finite steps
    + Finite data
    What does this really mean, though?
-** Objections to the Informal Definition
+** A subtle slight of hand
    + Can't we write infinite loops?
    + Operating Systems
    + Web Servers
@@ -65,4 +65,31 @@
 ** Algorithms
     + "step-by-step procedure for calculation"
     + Intuitive understanding matches informal definition of computation
-    + 
+    + For every functions, does there exist an algorithm that computes it?
+    + Just because Riemmanian integral doesn't work...
+    + Abscence of evidence blah blah blah
+** The limits of algorithms
+   + Not all mathematical functions have a computable implementation
+   + Some functions are /inherently/ incomputable
+   + Easy to prove with counting and sets
+* Sets 
+** Sets in mathematics
+   + Sets are collections of objects
+   + An object is just A Thing
+   + Sets have a "size" called cardinality
+     (insert image of basket of cats)
+   + What size is this?
+   + Finite sets are sets whose size is a natural number $(0,1,\ldots)$
+** Infinite sets
+   + The set of all natural numbers
+     \pause
+   + The set of all real numbers
+     \pause
+   + The set of possible sentences in english
+     \pause
+   + The set of speakers you'd rather be listening to
+** How infinite is infinite
+   + Infinity comes in different sizes!
+* Turing Machines
+* Lambda Calculus
+* Constructive Mathematics
