@@ -3,10 +3,6 @@
 #+AUTHOR: Clarissa Littler
 #+OPTIONS: H:2
 * Computers
-  CLOCK: [2014-06-23 Mon 10:46]--[2014-06-23 Mon 11:19] =>  0:33
-  CLOCK: [2014-06-23 Mon 08:31]--[2014-06-23 Mon 09:03] =>  0:32
-  CLOCK: [2014-06-22 Sun 10:14]--[2014-06-22 Sun 10:45] =>  0:31
-
 ** What Are Computers, Really?
    + Physical devices that carry out computation
    #+BEAMER: \pause
@@ -191,4 +187,4 @@ Thank you all you've been a wonderful audience
 ** Take-aways 
    + Programming is a *subset* of mathematics
    + Understanding the limits of computation is useful
-   + Types can be more than bug catchers, they're theorem provers
+   + Types can be more than bug catchers, they're theorems we can prove
