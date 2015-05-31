@@ -2,189 +2,34 @@
 #+TITLE: What Are Computers, Really?
 #+AUTHOR: Clarissa Littler
 #+OPTIONS: H:2
-* Computers
-** What Are Computers, Really?
-   + Physical devices that carry out computation
-   #+BEAMER: \pause
-   + We're done!
-** Questions?
-Thank you all you've been a wonderful audience
-** What Is Computation, Really?
-   + Defined computers via computation
-   + What's computation?
-   #+BEAMER: \pause
-   + It's what computers do, OBVI!
-** What is Computation, Really for Totes Realsies This Time?
-   + Circular definitions are bad 
-   + Define computation independent of physical machines
-   + Computation $\subseteq$ Mathematics
-   #+BEAMER: \pause
-   + Computation $\subset$ Mathematics
-** Why Do We Care?
-   + Computers have limits
-   + Limits are independent of hardware
-   + Chained by the laws of physics and mathematics
-** Limits of Computation
-   + No perfect virus scanner
-   #+BEAMER: \pause
-   + No program to perfectly check for infinite loops
-   #+BEAMER: \pause
-   + No program to calculate proofs of all true theorems
-   #+BEAMER: \pause
-      + Wait, what?  
-* Computation
-** Computation: Examples
-   + Database queries
-   #+BEAMER: \pause
-   + Counting 
-   #+BEAMER: \pause
-   + Serving web pages
-   #+BEAMER: \pause
-   + What do these have in common?
-** Computation: An Informal Definition
-   + Computable functions:
-     + finite time
-     + finite rules
-     + finite data
-       #+BEAMER: \pause
-   + What about operating systems and servers?
-** Computation vs. Mathematics
-   + Computable functions capture notion of algorithm
-   #+BEAMER: \pause
-   + Roughly a function is computable when there exists a program for it
-   #+BEAMER: \pause
-   + Cover exact definition later
-   #+BEAMER: \pause
-   + Are all mathematically definable functions computable?
-   #+BEAMER: \pause
-   + Answer: *Not even remotely!*
-* A Little Set Theory: Or, What Computation Isn't!
-** What Are Sets?
-   + Sets are collections of "things"
-     #+BEAMER: \pause
-   + "Things" can be any definable concept
-     #+BEAMER: \pause
-     + Set of all cat pictures on the internet
-     #+BEAMER: \pause
-     + Set of all burritos eaten from food carts to this date
-     #+BEAMER: \pause
-     + Set of all talks you'd rather be at /right now/
-** Size of Sets
-   + Finite sets are sets you can count up to a finite size
-   + The number you reach when counting elements is the /cardinality/
-   + We write cardinality of a set $A$ as $|A|$
-   + The set of counting numbers itself a set: $\mathbb{N}$
-   + Can you count $\mathbb{N}$ to a finite number?
-     #+BEAMER: \pause
-   + No! A logical contradiction otherwise.
-** Countably infinite
-   + Sets that are still countable, but the counting doesn't end in finite time
-   + $\mathbb{N}$ is countable: cardinality $\aleph_0$
-   + The rational numbers are countable
-   + The integers are countable
-   #+BEAMER: \pause
-   + The number of finite strings definable over a finite alphabet is countable
-      + Goedel numberings
-** Uncountably infinite
-   + Sets of functions: $|A \to B| = |B|^{|A|}$
-   + Set of functions $|\mathbb{N} \to \mathbb{N}| = \aleph_0^{\aleph_0}$
-   #+BEAMER: \pause
-   + This is not countable
-   #+BEAMER: \pause
-   + This isn't even remotely countable
-   #+BEAMER: \pause
-   + This is larger than you can possibly wrap your head around
-** What's The Point?
-   + Programs are finite strings over a finite alphabet
-   #+BEAMER: \pause
-   + The set of programs is $\aleph_0$
-   #+BEAMER: \pause
-   + The set of computable functions is the size of the set of programs
-   #+BEAMER: \pause
-   + The set of mathematically definable functions is larger than $\aleph_0$
-   #+Beamer: \pause
-   + The set of computable functions is vanishingly small compared to all functions
-** What Are The Implications?
-   + There's a reason programming is hard
-   + Can't even imagine a world in which all functions are computable
-     + Database queries
-     + Search results
-     + Cryptography
-   + Physics and speed of information?
-* What Computation is!
-** Turing's Insight
-   + Computer was a title not an object
-   + Turing watched how computers work
-   + Think elementary school arithmetic worksheets:
-     + Problems /are/ scratch paper
-     + Clearly defined order in which digits are added
-     + Can stop and come back to problem
+
+* Computers and Programs
+** Computation Sounds Like Computer
+** Computation Isn't About Computers
+** Computation As Description
+** Computation As Directions
+** Computation As Recipe
+** Computation As (Finitary) Mathematics
+* Finite and Infinite
+** Finiteness
+** Infiniteness
+** Kinds of Infinity
+** Criterion of Computability
+* Specifications and Descriptions
+** Specifications of Problems 
+** Computations Solve Specifications
+* Models of Computation
+** The Need for a Model of Computation
 ** Turing Machines
-   + A universal model of computation!
-   + Simplifies scratch paper: 1d not 2d
-   + Always uses a finite amount of scratch paper
-   + Has only a finite number of rules
-      + can look at input and remember a finite number of things
-** The Use of Turing Machines
-   + Universal Turing Machine
-   + Textual descriptions of Turing Machines are "code"
-   + Ties back into cardinality argument
-   + Dicuss difficulty of problems: decideable vs. recognizable
-** Decideable 
-   + Decideable means the problem can always be solved in finite time
-   + Decideable problems:
-     + RegExp matching
-     + Arithmetic
-     + Sorting
-     + Checking if a proof is valid
-     + (Most) type-checking
-** Recognizable
-   + Recognizable means well-formed inputs can be solved in finite time
-     + i.e. the input has a proper solution and is written in the right format
-   + Recognizable problems:
-     + Mostly meta-properties or meta-programming: Rice's theorem
-     + Termination on a given input
-     + Testing a program's behavior
-     + Some type-checking (i.e. Scala)
-     + C++ templates
-** Why Are Some Problems Not Decideable?
-   + Logical paradox
-   + Halting problem: does a program halt on a given input?
-   + Variant on Russels's paradox
-     + Set of all sets that don't contain themselves
-     + Program that terminates only if a program doesn't terminate on itself
-   + Once you prove one thing isn't decideable, use it to prove others
-* Constructive mathematics
-** Untyped Lambda Calculus
-   + A different model of computation
-   + Invented by Alonzo Church as foundation of mathematics
-   + Works as a universal model of computation!
-   + Theory of function abstraction and application
-   + ~function (x) {body}~
-   + Variables, anonymous functions, function calls
-** Church-Turing Thesis
-   + Lambda calculus equivalent to Turing Machines
-   + Church-Turing thesis says there is no stronger model of computation
-   + Evidence: every universal model we know can simulate each other
-   + Still just a hypothesis! Not proven, but very likely
-** Turing Completeness and You
-   + Turing complete means a PL is equivalent to Turing machines
-   + Most languages are
-   + This is why you can accidentally make infinite loops
-** Typed Lambda Calculus
-   + Lambda calculus with /types/
-   + Types are stronger than you're used to
-   + Well-typed programs can't loop
-   + *Not* Turing complete
-** Curry-Howard
-   + Curry-Howard correspondence
-   + Types are theorems
-   + A program of type $A$ is a proof that the theorem $A$ is true
-   + $A \to A$ means $A$ implies $A$
-   + In Agda ~(A : Set) -> (a b c : A) -> a == b -> b == c -> a == c~
-     is a type that expresses transitivity of equality
-* Wrap-up
-** Take-aways 
-   + Programming is a *subset* of mathematics
-   + Understanding the limits of computation is useful
-   + Types can be more than bug catchers, they're theorems we can prove
+** Turing's Inspiration
+** Human Computers and Finite Processes
+* Unsolvable Problems
+** The Halting Problem
+** Undecidable Problems
+** Non-Computable Reals
+* The Ongoing Saga of Church-Turing
+** The Church-Turing Thesis
+** An Argument in Favor of The Church-Turing Thesis
+** Church-Turing as Physics
+** Church-Turing as Cognition
+** Is Strong AI Possible?
