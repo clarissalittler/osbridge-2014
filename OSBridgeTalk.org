@@ -3,15 +3,53 @@
 #+AUTHOR: Clarissa Littler
 #+OPTIONS: H:2
 
+* Outline and Goals
+** Fundamental Questions
+   + What are the limits of computers?
+  #+BEAMER: \pause
+   + Are there problems a computer can never solve?
+  #+BEAMER: \pause
+   + Do all programming languages describe the same thing?
+  #+BEAMER: \pause
+   + What is a program, really?
+  #+BEAMER: \pause
+** How We'll Answer Them
+   + Build up a definition of computation independent of computers
+  #+BEAMER: \pause
+   + Give examples of non-computable problems
+  #+BEAMER: \pause
+   + Sketch out a mathematical model of computation
+  #+BEAMER: \pause
+   + Discuss the implications and limits of our knowledge of computability
 * Computers and Programs
 ** Computation Sounds Like Computer
+   + Computation is what computers do
+   + A program /describes/ a computation
+   (insert example of simple code here)
 ** Computation Isn't About Computers
+   + Programs have meaning independent of computers
+   + A programming language is a system for describing programs
+   + Need an independent, mathematical description of programs
+   + Can't assume a-priori that all languages describe the same thing
+   (insert code examples of )
 ** Computation As Description
+   + A computation is a description of a /finitary process/
+   #+BEAMER: \pause
+   + A finitary process:
+     + Uses only finite resources
+     + Takes only finite steps to produce a result
+     + Has a finite description
 ** Computation As Directions
+   #+BEGIN_CENTER
+   Imagine computations as a kind of directions for travel
+   #+END_CENTER
+   + There are 
 ** Computation As Recipe
+** Computation As Arithmetic
 ** Computation As (Finitary) Mathematics
 * Finite and Infinite
 ** Finiteness
+   + Finite sets 
 ** Infiniteness
 ** Kinds of Infinity
 ** Criterion of Computability
@@ -25,11 +63,17 @@
 ** Human Computers and Finite Processes
 * Unsolvable Problems
 ** The Halting Problem
-** Undecidable Problems
-** Non-Computable Reals
+** No Perfect Virus Scanner
+** Rice's Theorem
 * The Ongoing Saga of Church-Turing
 ** The Church-Turing Thesis
+   + Turing machines describe all computation
+   + (Almost) all programming languages can describe all computation
+   + 
 ** An Argument in Favor of The Church-Turing Thesis
 ** Church-Turing as Physics
 ** Church-Turing as Cognition
+   + Are brains computable?
+   + Currently an unknown question
 ** Is Strong AI Possible?
+   + Are 
