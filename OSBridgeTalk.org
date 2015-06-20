@@ -1,79 +1,288 @@
-#+STARTUP: beamer
 #+TITLE: What Are Computers, Really?
 #+AUTHOR: Clarissa Littler
+#+EMAIL: clarissa.littler@gmail.com
+#+DATE: 6-23-2015
 #+OPTIONS: H:2
+#+BEAMER_THEME: Madrid
+#+LATEX_CLASS: beamer
+
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [bigger]
+
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
 
 * Outline and Goals
 ** Fundamental Questions
-   + What are the limits of computers?
-  #+BEAMER: \pause
-   + Are there problems a computer can never solve?
-  #+BEAMER: \pause
-   + Do all programming languages describe the same thing?
-  #+BEAMER: \pause
-   + What is a program, really?
-  #+BEAMER: \pause
+   + What are the limits of computers? \pause
+   + Are there problems a computer can never solve? \pause
+   + Do all programming languages describe the same thing? \pause
+   + What even *are* programs? 
 ** How We'll Answer Them
-   + Build up a definition of computation independent of computers
-  #+BEAMER: \pause
-   + Give examples of non-computable problems
-  #+BEAMER: \pause
-   + Sketch out a mathematical model of computation
-  #+BEAMER: \pause
+   + Give intuitive criterion for "computability" as finite process \pause
+   + Build up a definition of computation independent of computers \pause
+   + Sketch out mathematical models of computation \pause
+   + Give examples of non-computable problems \pause
    + Discuss the implications and limits of our knowledge of computability
 * Computers and Programs
 ** Computation Sounds Like Computer
-   + Computation is what computers do
-   + A program /describes/ a computation
-   (insert example of simple code here)
-** Computation Isn't About Computers
-   + Programs have meaning independent of computers
-   + A programming language is a system for describing programs
-   + Need an independent, mathematical description of programs
-   + Can't assume a-priori that all languages describe the same thing
-   (insert code examples of )
-** Computation As Description
-   + A computation is a description of a /finitary process/
-   #+BEAMER: \pause
-   + A finitary process:
-     + Uses only finite resources
-     + Takes only finite steps to produce a result
-     + Has a finite description
-** Computation As Directions
-   #+BEGIN_CENTER
-   Imagine computations as a kind of directions for travel
-   #+END_CENTER
-   + There are 
-** Computation As Recipe
-** Computation As Arithmetic
-** Computation As (Finitary) Mathematics
-* Finite and Infinite
-** Finiteness
-   + Finite sets 
-** Infiniteness
-** Kinds of Infinity
-** Criterion of Computability
-* Specifications and Descriptions
-** Specifications of Problems 
-** Computations Solve Specifications
+   + Computation is what computers do \pause
+   + A program /describes/ a computation \pause
+   + The limits of computation are limits of *description* \pause 
+   + What processes can be *described* in a finite way with a finite *implementation*?
+** Finite Processes
+   + Why finite? \pause
+   + Because we can't write an infinite amount of text! \pause
+   + We're restricted to \pause
+     + finite *alphabet* \pause
+     + finite *length*
+** Examples of Finite Processes
+*** Recipe as Finite Process 					    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+Cook celery and onion together til soft, then add frozen spinach and cook to get some of the moisture out and reduce volume add broth lentils cilantro and other spices, stir thoroughly, throw bay leaves on top.
+
+Cook for 40 minutes
+
+Turn off heat, wait til it stops bubbling and blend thoroughly.
+
+Cook for 5-10 minutes after blending
+** Examples of Finite Processes
+#+BEGIN_CENTER
+Another finite process
+#+END_CENTER
+file:Directions.png
+
+** Examples of Finite Processes
+file:DirectionsScreenshot.png   
+** Examples of Finite Processes
+file:MetaMetaShot.png
+#+BEAMER: \pause
+
+I'm done with this joke now, I promise.
+** Examples of Finite Processes
+#+BEGIN_LaTeX
+  \begin{align*}
+  5 + 10 & = 4 + 11 \\
+         & = 3 + 12 \\
+         & = 2 + 13 \\
+         & = 1 + 14 \\
+         & = 0 + 15 \\
+         & = 15
+  \end{align*} 
+#+END_LaTeX
+
+** Examples of Finite Processes
+*** 							      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.4
+    :END:
+							      The following Haskell snippet that evaluates the sum of the integers from 1 to 10 is *also* a finite process
+*** 							      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.5
+    :END:
+   #+BEGIN_SRC haskell :exports code :results value
+     let f x = sum [1..x] in f 10
+   #+END_SRC
+
+   #+RESULTS:
+   : 55
+
+** Examples of Finite Processes
+   Many more examples exist in the wild including:
+   + counting on your fingers \pause
+   + long division \pause
+   + sorting your vinyl collection with a bucket sort \pause
+   + compiling code \pause
+* What Makes a Finite Process Finite
+** Qualities of Finite Processes
+   + Informal criterion for a "finite process"
+     + Finite Time
+     + Finite Resources
+     + Finite Directions
+** What Does Finite Mean?
+   + A quantity is finite when it is "measurable"
+     + Counting 
+     + Weighing
+     + Timing
+** Finite Time
+   + Finite process produces *output* in finite time
+   + Finite time:
+     + Counting on your fingers
+     + Sorting vinyl
+     + Compiling
+     + Walking to a friend's house
+** Why Finite Time?
+   Only actions taking finite time can actually be finished because that's how our universe works.
+** Finite Resources
+   + Finite processes only use finite resources
+     + scratch paper
+     + materials
+     + RAM
+     + disk space
+** Why Finite Resources
+   No computer and no physical process that we know of can use an infinite quantity, thus infinite resources shouldn't be allowed in computation.
+** Finite Directions
+   + Finite processes are only allowed to have a finite number of steps in their description
+     + Directions
+     + Recipes
+     + *Programs*
+     + note: a ~while~ loop is a finite!
+** Why Finite Directions?
+   Any process that has an infinite number of steps in its directions must violate either the finite time constraint, finite resources, or both. 
+ 
+** What Next?
+*** A Block						     :BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: column
+    :BEAMER_col: 0.6
+    :END:      
+   + These are rules of thumb
+   + But how do we *actually* specify a process?
+   + Most directions too broad: 
+     + driving directions
+     + cooking directions
+   + Need instructions simple enough for a machine 
+*** Images 							      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :END:
+    file:howtodraw.jpg
+** Modelling Computation
+*** Why a Model?					      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.4
+    :END:
+  + We need a precise, mathematical formulation of descriptions
+    + Need to know if all of our "pieces" are finitary
+    + 
+  \pause
+*** What Is a Model?					      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.5
+    :END:
 * Models of Computation
 ** The Need for a Model of Computation
-** Turing Machines
-** Turing's Inspiration
+   + Are C, Java, Scheme, and Erlang all describing the same programs?
+   + Need an independent, rigorous description of computation
+   + Partial recursive functions
+   + Lambda calculus
+   + Turing's automatic machines
+** Turing and His Automatic Machines
+   + Turing's 1936 paper "On Computable Numbers, with an Application to the [Decision Problem]" cite:turing1936computable
+   + Turing's "automatic machines" were addressing problems in foundational logic
+     + The "decision problem"
+   + Automatic machines weren't *actually* stand-ins for modern computers
+   + Turing was inspired by human computers
+** Human Computers
+   
+** Decisions and Problems
+
+** A Turing Machine
+*** Text Block							      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.5
+    :END:
+   + Arbitrary amount of tape
+   + Reads and writes from only once cell at a time
+   + Only has a finite "alphabet" of symbols
+   + Has a finite number of states for deciding next move
+*** Image							      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :END:
+    file:headLg.jpg
+** Historic Importance of Turing Machines
 ** Human Computers and Finite Processes
+   
+* Specifications and Processes
+** Specifications of Problems
+   + Specification *precisely* describes the problem
+   + Implementation is the solution to the problem
+   + Fundamental question of computing:
+     + what specifications have a computable implementation?
+** Specifications vs. Implementations
+#+BEGIN_CENTER
+    Mathematical addition is a specification, how you perform the addition is an implementation
+#+END_CENTER
+  + counting on fingers
+  + repeatedly adding 1
+  + 
+** Computations Solve Specifications
 * Unsolvable Problems
 ** The Halting Problem
 ** No Perfect Virus Scanner
 ** Rice's Theorem
 * The Ongoing Saga of Church-Turing
 ** The Church-Turing Thesis
-   + Turing machines describe all computation
-   + (Almost) all programming languages can describe all computation
-   + 
-** An Argument in Favor of The Church-Turing Thesis
+*** Original Formulation 				      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+   There is no model of computation more expressive than Turing machines (equivalently, the lambda calculus). cite:kleene1952introduction
+*** Equivalent Formulation 				      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+    Equivalent formulation: no programming language can be more powerful than a Turing machine
 ** Church-Turing as Physics
+*** Strong Church-Turing Thesis					    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+   The laws of physics are inherently computable and there is no physical process that cannot be computed by some algorithm.
+*** 								    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+   + is this actually true? \pause
+   + we literally have no idea! \pause
+   + strong Church-Turing thesis has major implications for physics \pause
+     + reality must be "discrete" \pause
+     + real numbers are approximations at scale
 ** Church-Turing as Cognition
-   + Are brains computable?
-   + Currently an unknown question
+   + Are brains computable? \pause
+   + Currently an unknown question \pause
+   + Does free will actually exist or is it an illusion?
 ** Is Strong AI Possible?
-   + Are 
+   + Can we make a machine intelligence comparable to our own? \pause
+   + Is human intelligence computable? \pause
+   + Science fiction assumes so! \pause
+   + Deep philosophic and physical implications
+** Skirting Computability
+*** Goedel's Way					      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.4
+    :END:
+  file:gway.jpg
+*** Hyper-Turing Computation				      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+   + Is computation (in the Church-Turing sense) complete? \pause
+   + Is physics computable? \pause
+     + If yes, then no \pause
+     + If no, then *maybe* cite:chaitin2011godel \pause
+   + Hyper-Turing computation
+* Finale
+** In Conclusion
+   + Computation is a thing that exists outside computers \pause
+   + The mathematics of finite methods \pause
+   + Computation has *limits* \pause
+   + The limits of computation are understood \pause
+   + How computation relates to the laws of the universe? \pause
+     + Much more unknown
+** Any Questions?
+** Bibliography
+\bibliography{references}
+\bibliographystyle{plain}
