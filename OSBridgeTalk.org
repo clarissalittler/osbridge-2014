@@ -30,12 +30,6 @@
    + A program /describes/ a computation \pause
    + The limits of computation are limits of *description* \pause 
    + What processes can be *described* in a finite way with a finite *implementation*?
-** Finite Processes
-   + Why finite? \pause
-   + Because we can't write an infinite amount of text! \pause
-   + We're restricted to \pause
-     + finite *alphabet* \pause
-     + finite *length*
 ** Examples of Finite Processes
 *** Recipe as Finite Process 					    :B_block:
     :PROPERTIES:
@@ -49,19 +43,34 @@ Turn off heat, wait til it stops bubbling and blend thoroughly.
 
 Cook for 5-10 minutes after blending
 ** Examples of Finite Processes
-#+BEGIN_CENTER
+*** 								    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
 Another finite process
-#+END_CENTER
+*** 								    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
 file:Directions.png
 
 ** Examples of Finite Processes
 file:DirectionsScreenshot.png   
 ** Examples of Finite Processes
 file:MetaMetaShot.png
-#+BEAMER: \pause
-
+\pause
+*** 								    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
 I'm done with this joke now, I promise.
 ** Examples of Finite Processes
+\pause
+*** Adding						      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
 #+BEGIN_LaTeX
   \begin{align*}
   5 + 10 & = 4 + 11 \\
@@ -72,7 +81,26 @@ I'm done with this joke now, I promise.
          & = 15
   \end{align*} 
 #+END_LaTeX
-
+\pause
+*** Another Way						      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+    #+BEGIN_LaTeX
+      \begin{align*}
+      5 + 10 & = 6 + 9 \\
+             & = 7 + 8 \\
+             & = 8 + 7 \\
+             & = 9 + 6 \\
+             & = 10 + 5 \\
+             & = 11 + 4 \\
+             & = 12 + 3 \\
+             & = 13 + 2 \\
+             & = 14 + 1 \\
+             & = 15
+      \end{align*} 
+#+END_LaTeX
 ** Examples of Finite Processes
 *** 							      :B_block:BMCOL:
     :PROPERTIES:
@@ -80,6 +108,7 @@ I'm done with this joke now, I promise.
     :BEAMER_col: 0.4
     :END:
 							      The following Haskell snippet that evaluates the sum of the integers from 1 to 10 is *also* a finite process
+\pause
 *** 							      :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
@@ -93,48 +122,123 @@ I'm done with this joke now, I promise.
    : 55
 
 ** Examples of Finite Processes
-   Many more examples exist in the wild including:
+   Many more examples exist in the wild including: \pause
    + counting on your fingers \pause
    + long division \pause
    + sorting your vinyl collection with a bucket sort \pause
    + compiling code \pause
 * What Makes a Finite Process Finite
 ** Qualities of Finite Processes
-   + Informal criterion for a "finite process"
-     + Finite Time
-     + Finite Resources
-     + Finite Directions
-** What Does Finite Mean?
+*** 								    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+  Informal criterion for a "finite process"
+\pause
+*** Finite Implementation				      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+     + Finite time
+     + Finite resources
+\pause
+*** Finite Description					      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+     + Finite length
+     + Finite alphabet
+** Digression: What Does Finite Mean?
+*** Informal Intuition					      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
    + A quantity is finite when it is "measurable"
      + Counting 
      + Weighing
      + Timing
+*** Examples						      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+     \pause
+    + how massive our Sun is \pause
+    + the distance between planets \pause
+    + the number of lines of code in your program \pause
+    + the number of words in this talk \pause
+    + number of other talks you'd rather be at
 ** Finite Time
-   + Finite process produces *output* in finite time
-   + Finite time:
-     + Counting on your fingers
-     + Sorting vinyl
-     + Compiling
-     + Walking to a friend's house
-** Why Finite Time?
-   Only actions taking finite time can actually be finished because that's how our universe works.
+*** 								    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+  Finite process produces *output* in finite time
+*** Examples of Finite Time				      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+   + Counting on your fingers
+   + Sorting vinyl
+   + Walking to a friend's house
+   + Boiling ramen
+*** 								      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+**** Why Finite Time?						    :B_block:
+     :PROPERTIES:
+     :BEAMER_env: block
+     :END:
+    Only actions taking *finite* time can actually be finished because that's how our universe works.
+**** Produce Output?						    :B_block:
+     :PROPERTIES:
+     :BEAMER_env: block
+     :END:
+     + Some finite processes run forever \pause
+       + Operating systems \pause
+       + Servers \pause
+       + Interactive programs
 ** Finite Resources
-   + Finite processes only use finite resources
+*** 								    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+    Finite processes only use finite resources
+*** Examples of Resources				      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
      + scratch paper
      + materials
-     + RAM
+     + RAM 
      + disk space
-** Why Finite Resources
-   No computer and no physical process that we know of can use an infinite quantity, thus infinite resources shouldn't be allowed in computation.
-** Finite Directions
-   + Finite processes are only allowed to have a finite number of steps in their description
+*** Why Finite Resources				      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+   No computer and no *physical process* that we know of can use an infinite quantity, thus infinite resources shouldn't be allowed in computation. \pause
+** Finite Descriptions
+*** 								    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+ Finite processes are only allowed to have a finite number of steps in their description, i.e. a finite length as a string
+*** Examples of Finite Descriptions
      + Directions
      + Recipes
      + *Programs*
-     + note: a ~while~ loop is a finite!
-** Why Finite Directions?
-   Any process that has an infinite number of steps in its directions must violate either the finite time constraint, finite resources, or both. 
- 
+       + a ~while~ loop is a finite!
+       + finite 
+*** Why Finite Directions?
+    Any process that has an infinite number of steps in its *directions* must violate either the finite time constraint, finite resources, or both. 
+  
 ** What Next?
 *** A Block						     :BMCOL:
     :PROPERTIES:
