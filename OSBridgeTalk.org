@@ -176,7 +176,7 @@ I'm done with this joke now, I promise.
     :PROPERTIES:
     :BEAMER_env: block
     :END:
-  Finite process produces *output* in finite time
+  Finite process produces *output* in finite time \pause
 *** Examples of Finite Time				      :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
@@ -186,6 +186,7 @@ I'm done with this joke now, I promise.
    + Sorting vinyl
    + Walking to a friend's house
    + Boiling ramen
+\pause
 *** 								      :BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.45
@@ -195,6 +196,7 @@ I'm done with this joke now, I promise.
      :BEAMER_env: block
      :END:
     Only actions taking *finite* time can actually be finished because that's how our universe works.
+\pause
 **** Produce Output?						    :B_block:
      :PROPERTIES:
      :BEAMER_env: block
@@ -223,22 +225,53 @@ I'm done with this joke now, I promise.
     :BEAMER_env: block
     :BEAMER_col: 0.45
     :END:
-   No computer and no *physical process* that we know of can use an infinite quantity, thus infinite resources shouldn't be allowed in computation. \pause
+   No computer and no *physical process* that we know of can use an infinite quantity, thus infinite resources shouldn't be allowed in computation.
 ** Finite Descriptions
 *** 								    :B_block:
     :PROPERTIES:
     :BEAMER_env: block
     :END:
  Finite processes are only allowed to have a finite number of steps in their description, i.e. a finite length as a string
-*** Examples of Finite Descriptions
+*** Examples of Finite Descriptions			      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
      + Directions
      + Recipes
      + *Programs*
-       + a ~while~ loop is a finite!
-       + finite 
-*** Why Finite Directions?
-    Any process that has an infinite number of steps in its *directions* must violate either the finite time constraint, finite resources, or both. 
-  
+       + a ~while~ loop is finite!
+*** Why Finite Directions?				      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+    Any process that has an infinite number of steps in its description would: \pause
+    + take necessarily infinite time to process and run
+      + not *absolutely* a bad thing, but likely so
+    + take infinite *resources* to store
+      + this is *absolutely* bad
+** Finite Alphabet
+*** 								    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+    Finite processes can only be written with a finite alphabet 
+*** Examples of Alphabets				      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+    + 0 and 1
+    + the English alphabet (a-z, A-Z)
+    + unicode
+    + ASCII
+*** Why a Finite Alphabet?				      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+    An infinite alphabet can't have an implementation that is, itself, a finite process.
 ** What Next?
 *** A Block						     :BMCOL:
     :PROPERTIES:
@@ -257,39 +290,55 @@ I'm done with this joke now, I promise.
     :END:
     file:howtodraw.jpg
 ** Modelling Computation
-*** Why a Model?					      :B_block:BMCOL:
+*** What Is a Model? 						    :B_block:
     :PROPERTIES:
     :BEAMER_env: block
-    :BEAMER_col: 0.4
     :END:
-  + We need a precise, mathematical formulation of descriptions
-    + Need to know if all of our "pieces" are finitary
-    + 
-  \pause
-*** What Is a Model?					      :B_block:BMCOL:
+A model of computation is a mathematically precise formulation of computation. \pause
+*** What's in A Model?						    :B_block:
     :PROPERTIES:
     :BEAMER_env: block
-    :BEAMER_col: 0.5
     :END:
+    + a rigorous way to describe computation \pause
+    + a way to *perform* the descriptions
+ 
 * Models of Computation
-** The Need for a Model of Computation
-   + Are C, Java, Scheme, and Erlang all describing the same programs?
-   + Need an independent, rigorous description of computation
-   + Partial recursive functions
-   + Lambda calculus
-   + Turing's automatic machines
+** The Search for a Model
+   + 1930s logicians searched for theorem proving algorithms \pause
+     + Proofs in 1st order logic \pause
+     + The decision problem \pause
+   + Needed a model of computation to prove if needed computation could exist \pause
+   + Turing won the race!
 ** Turing and His Automatic Machines
-   + Turing's 1936 paper "On Computable Numbers, with an Application to the [Decision Problem]" cite:turing1936computable
-   + Turing's "automatic machines" were addressing problems in foundational logic
-     + The "decision problem"
-   + Automatic machines weren't *actually* stand-ins for modern computers
-   + Turing was inspired by human computers
+   + Turing's 1936 paper "On Computable Numbers, with an Application to the [Decision Problem]" cite:turing1936computable \pause
+   + Automatic machines weren't *actually* stand-ins for modern computers \pause
+   + Turing was inspired by *human* computers
 ** Human Computers
-   
-** Decisions and Problems
-
+   + Turing's day computers were people \pause
+     + Actually, they were mostly women cite:grier2013computers \pause
+   + Computers worked on \pause
+     + Physics simulations \pause
+     + Scientific research \pause
+     + Firing tables
+** How Humans Compute
+*** An Example						      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+    file:Addition.jpg 
+\pause
+*** How We Think					      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+    + Finite scratch paper \pause
+    + Finite steps \pause
+    + You can look at it and pick up where I left off \pause
+    + Only requires a finite number of brain states to perform
 ** A Turing Machine
-*** Text Block							      :BMCOL:
+*** 								      :BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.5
     :END:
@@ -302,28 +351,13 @@ I'm done with this joke now, I promise.
     :BEAMER_col: 0.4
     :END:
     file:headLg.jpg
-** Historic Importance of Turing Machines
-** Human Computers and Finite Processes
-   
-* Specifications and Processes
-** Specifications of Problems
-   + Specification *precisely* describes the problem
-   + Implementation is the solution to the problem
-   + Fundamental question of computing:
-     + what specifications have a computable implementation?
-** Specifications vs. Implementations
-#+BEGIN_CENTER
-    Mathematical addition is a specification, how you perform the addition is an implementation
-#+END_CENTER
-  + counting on fingers
-  + repeatedly adding 1
-  + 
-** Computations Solve Specifications
-* Unsolvable Problems
-** The Halting Problem
-** No Perfect Virus Scanner
-** Rice's Theorem
-* The Ongoing Saga of Church-Turing
+    Courtesy of [[http://aturingmachine.com/hardware.php]]
+** Historic Importance of Turing Machines   
+   + Church's lambda calculus was *slightly* first cite:church1936unsolvable \pause
+     + Mere months! \pause
+   + The lambda calculus wasn't *obviously* computable \pause
+   + Turing's machines are obviously computable \pause
+     + Completely analogous to human processes  
 ** The Church-Turing Thesis
 *** Original Formulation 				      :B_block:BMCOL:
     :PROPERTIES:
@@ -337,6 +371,65 @@ I'm done with this joke now, I promise.
     :BEAMER_env: block
     :END:
     Equivalent formulation: no programming language can be more powerful than a Turing machine
+** Programs As Computations
+   + A programming *language* is a model of computation \pause
+   + A program a *description* of a computation \pause
+   + An interpreter/compiler is the *implementation* of the description \pause
+   + The real meaning of Turing Complete
+* Unsolvable Problems
+** The Halting Problem
+*** Formal Specification				      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:      
+    Is there a Turing machine that, when fed the description of another Turing machine, determines if that machine will halt on a given input? \pause
+*** Informal Implication				      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+   Can you write a program that can detect if other programs have infinite loops?
+** Why Can't We Solve The Halting Problem?
+*** Liar's Paradox					      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+    file:Liarbot.jpg
+*** Proof Idea						      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+    + Assume we have a program that can solve the halting problem \pause
+    + Use it to make a liar-compiler that \pause
+      + loops if the input program halts when fed its own source code
+      + halts if the input program loops when fed its own source code \pause
+    + What does the liar say about itself?
+** Virus Scanners
+*** Full Employment Theorem				      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+    Is there a program that can perfectly detect if another program is carrying a viral payload? \pause
+*** No!							      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+    file:Scanbot.jpg
+\pause
+    Why not?
+** Rice's Theorem
+*** Semi-Formally 					      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+    Non-trivial properties of all programs
+* The Legacy of Church-Turing
 ** Church-Turing as Physics
 *** Strong Church-Turing Thesis					    :B_block:
     :PROPERTIES:
@@ -357,10 +450,20 @@ I'm done with this joke now, I promise.
    + Currently an unknown question \pause
    + Does free will actually exist or is it an illusion?
 ** Is Strong AI Possible?
+*** 							      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
    + Can we make a machine intelligence comparable to our own? \pause
    + Is human intelligence computable? \pause
    + Science fiction assumes so! \pause
-   + Deep philosophic and physical implications
+   + Deep philosophic and physical implications \pause
+*** 								      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+  file:Livebot.jpg
 ** Skirting Computability
 *** Goedel's Way					      :B_block:BMCOL:
     :PROPERTIES:
