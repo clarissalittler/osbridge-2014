@@ -508,5 +508,7 @@ A model of computation is a mathematically precise formulation of computation. \
      + Much more unknown
 ** Any Questions?
 ** Bibliography
+\begin{tiny}
 \bibliography{references}
 \bibliographystyle{plain}
+\end{tiny}
