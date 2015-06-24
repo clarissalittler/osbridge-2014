@@ -428,6 +428,7 @@ A model of computation is a mathematically precise formulation of computation. \
     :END:
     file:Scanbot.jpg
 \pause
+
     Why not?
 ** Rice's Theorem
 *** Semi-Formally					      :B_block:BMCOL:
